@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="w-75 my-5 mx-auto">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control " oninput="ValidateInputes(this)" id="ProductName" placeholder="ProductName">
+            <div class="alert alert-danger d-none py-1  mt-3">
+                <small>product name must be start ..</small>
+            </div>
+            <label for="ProductName">ProductName</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control"oninput="ValidateInputes(this)" id="ProductPrice" placeholder="ProductPrice">
+            <label for="ProductPrice">ProductPrice</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea type="text" class="form-control" oninput="ValidateInputes(this)" id="Descrption" placeholder="Descrption"></textarea>
+            <label for="Descrption">Descrption</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input list="category" type="text"  oninput="ValidateInputes(this)" class="form-control" id="ProductCategory" placeholder="ProductCategory">
+            <label for="ProductCategory">ProductCategory</label>
+            <datalist id="category">
+                <option value="mobila"></option>
+                <option value="tv"></option>
+                <option value="laptop"></option>
+              
+            </datalist>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control"   id="ProductImage" placeholder="ProductImage">
+            <label for="ProductImage">ProductImage</label>
+        </div>
+
+        <button id="addbtn" onclick=" AddProduct()" class="btn btn-info addbtn d-block text-white ">add product</button>
+        <button id="upbtn" onclick="Updata()" class="btn btn-info  text-white d-none  ">Updata</button>
+
+        <input type="text" name="pname" id="searchinput" oninput="search(this.value)" class="w-100 form-control p-2 my-4" placeholder="SearchByName">
+        <table class="table text-center " id="table">
+       
+         <thead >
+            <th>index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Descption</th>
+            <th>Image</th>
+            <th>Delete</th>
+            <th>Updata</th>
+      
+         </thead>
+             <tbody class="tbody" id="tbody">
+             
+             </tbody>
+        </table>
+
+ <script src="css/bootstrap.bundle.min.js"></script>
+ <script src="main.js"></script>
+</body>
+
+</html>

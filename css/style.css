@@ -1,0 +1,13 @@
+/* label {
+    position: absolute;
+
+font-size: 20px;
+    left: 10px;
+    transition: font-size .3s ease-in;
+}
+
+input:focus+label {
+    font-size: 15px;
+    color: grey;
+
+} */
